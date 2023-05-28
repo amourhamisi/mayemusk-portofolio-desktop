@@ -1,0 +1,392 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 12px 7px rgba(24, 11, 12, 0.2);
+}
+
+svg {
+    width: 60%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* Cherry Colors */
+:root {
+    --cherry-primary: #b3001b;
+    --cherry-darker: #820014;
+    --cherry-lighter: #ff3b52;
+}
+
+/* White Colors */
+:root {
+    --white-primary: #ffffff;
+    --white-off-white: #f8f8f8;
+    --white-light-gray: #cfcdcd;
+}
+
+/* Body general styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation elements */
+header {
+    text-align: left;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--white-primary);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 29px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--white-primary);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+
+/* Sections */
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding: 40px;
+}
+
+/* 1st Section */
+.mainbanner {
+    margin-top: -78px;
+    background-image: url(/imgs/mainbanner.webp);
+    background-size: cover;
+    background-position: center;
+    width: 94%;
+    height: 94vh;
+}
+
+.hero-title {
+    margin-top: 90px;
+    font-size: x-large;
+}
+
+.hero-description {
+    color: var(--white-off-white);
+    width: 32%;
+}
+
+
+/* 2nd Section -- About */
+.about {
+    width: 94%;
+    height: 94vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+
+/* 3rd Section -- Book */
+.bookshelf {
+    width: 94%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.book-image img {
+    max-width: 100%;
+    height: 90vh;
+    border-radius: 5px;
+}
+
+.book-details {
+    display: grid;
+}
+
+.book-title {
+    position: relative;
+    bottom: 1rem;
+    font-size: xx-large;
+}
+
+.book-subtitle {
+    position: relative;
+    bottom: 3rem;
+    font-size: medium
+}
+
+.book-description {
+    position: relative;
+    bottom: 2rem;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 15px;
+}
+
+.icon-link img {
+    width: 50%;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    background: var(--cherry-lighter);
+}
+
+.cta-button:hover {
+    color: black;
+}
+
+
+/* 4th Section -- Interviews */
+.interviews {
+    width: 94%;
+    height: 97vh;
+}
+
+.interview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.interview-item {
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 45%;
+    padding-bottom: 20.25%;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interview-details {
+    padding: 20px;
+    position: relative;
+    bottom: 20%;
+    white-space: inherit;
+}
+
+.interview-details h4 {
+    margin-top: 0;
+}
+
+.interview-details p {
+    margin-bottom: 0;
+}
+
+.interviews-banner {
+    font-size: x-large;
+    padding-bottom: 20px;
+    margin-top: -15px;
+}
+
+
+/* 5th Section -- Contacts */
+.contact {
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #454545;
+    margin-bottom: 20px;
+}
+
+.contact-menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+
+.contact-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.contact-menu img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.contact-menu p,
+.contact-menu a {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    margin-right: auto;
+}
+
+.scrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.39);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    header {
+        text-align: left;
+        padding: 20px;
+    }
+
+    nav ul {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .mainbanner {
+        margin-top: -96px;
+        height: 96vh;
+    }
+
+    .hero-title {
+        margin-top: 90px;
+        font-size: x-large;
+        animation: fade-in 1s ease-in-out;
+    }
+
+    .hero-description {
+        color: var(--white-off-white);
+        width: 32%;
+        animation: slide-in 1s ease-in-out;
+    }
+}
+
+@media (max-width: 1308px) {
+    .mainbanner {
+        margin-top: -96px;
+        height: 96vh;
+    }
+
+    .hero-title {
+        color: black;
+        margin-top: 620px;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .hero-description {
+        color: #2a3940;
+        width: 44%;
+        font-size: x-large;
+        font-weight: 700;
+        text-align: center;
+        text-size-adjust: auto;
+        margin-left: 28.5%;
+        margin-top: 26px;
+    }
+}
